@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetInput();
-        Aim();
+        //Aim();
     }
 
     private void FixedUpdate()
