@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Player Projectile
+  - Triangle Projectile
+  - Circle Projectile
+  - Square Projectile
   layers:
   - Default
   - TransparentFX

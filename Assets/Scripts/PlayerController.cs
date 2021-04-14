@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] Vector2 direction;
 
+    [SerializeField] int lives;
+
     public bool dead;
 
 
@@ -108,11 +110,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Aim()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        Vector3 worldMousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = (Vector2)((worldMousePos - transform.position));
-        direction.Normalize();
-    }
+        if (col.gameObject.CompareTag(""))
+        {
+            lives--;
 
+            if(lives <= 0)
+            {
+                dead = true;
+            }
+        }
+    }
 }
