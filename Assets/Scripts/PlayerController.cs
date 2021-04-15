@@ -110,16 +110,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag(""))
-        {
-            lives--;
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.CompareTag(""))
+    //    {
+    //        lives--;
 
-            if(lives <= 0)
-            {
-                dead = true;
-            }
-        }
-    }
+    //        if(lives <= 0)
+    //        {
+    //            dead = true;
+    //        }
+    //    }
+    //}
 }

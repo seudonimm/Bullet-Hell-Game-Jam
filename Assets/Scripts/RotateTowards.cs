@@ -25,7 +25,6 @@ public class RotateTowards : MonoBehaviour
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + adjustment;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        Debug.Log("Rotate pls");
 
     }
 

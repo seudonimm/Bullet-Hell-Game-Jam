@@ -26,4 +26,12 @@ public class BasicBulletPlayer : MonoBehaviour
         _transform.Translate(shotTrajectory * Time.deltaTime * moveSpeed);
 
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.CompareTag("Destroy Box"))
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

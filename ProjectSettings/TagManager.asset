@@ -8,6 +8,7 @@ TagManager:
   - Triangle Projectile
   - Circle Projectile
   - Square Projectile
+  - Destroy Box
   layers:
   - Default
   - TransparentFX
