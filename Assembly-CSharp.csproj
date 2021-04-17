@@ -53,12 +53,15 @@
     <UnityVersion>2020.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerShield.cs" />
     <Compile Include="Assets\Scripts\RotateTowards.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\BasicBulletPlayer.cs" />
-    <Compile Include="Assets\Scripts\ObjectPooler.cs" />
+    <Compile Include="Assets\Scripts\CircleEnemyController.cs" />
+    <Compile Include="Assets\Scripts\MoveUp.cs" />
+    <Compile Include="Assets\Scripts\WaveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

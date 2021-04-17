@@ -99,7 +99,7 @@ MonoBehaviour:
   _transform: {fileID: 0}
   moveSpeed: 15
   shotTrajectory: {x: 0, y: 0}
-  shotJitter: 0.1
+  shotJitter: 0.2
 --- !u!58 &3796436012030607230
 CircleCollider2D:
   m_ObjectHideFlags: 0
