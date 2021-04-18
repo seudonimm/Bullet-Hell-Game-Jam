@@ -110,16 +110,16 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.CompareTag(""))
-    //    {
-    //        lives--;
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Square Projectile"))
+        {
+            lives--;
 
-    //        if(lives <= 0)
-    //        {
-    //            dead = true;
-    //        }
-    //    }
-    //}
+            if (lives <= 0)
+            {
+                dead = true;
+            }
+        }
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8406655388001614898}
   - component: {fileID: 8406655388001614897}
   - component: {fileID: 8406655388001614896}
+  - component: {fileID: 5528646704947061839}
   m_Layer: 0
   m_Name: Circle Enemy
   m_TagString: Untagged
@@ -97,6 +98,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 8406655388001614898}
   shotTimer: 0
-  shotTimerDefault: 0.5
+  shotTimerDefault: 0.3
   bulletNum: 5
   currentRot: 0
+  plus: 0
+  plusInc: 1000
+  rotate: 1
+--- !u!58 &5528646704947061839
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406655388001614911}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 5
