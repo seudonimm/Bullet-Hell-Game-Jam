@@ -70,6 +70,31 @@ public class PlayerShield : MonoBehaviour
                 break;
         }
     }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(shieldState == ShieldState.Circle)
+        {
+            if(col.gameObject.CompareTag("Circle Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+        if (shieldState == ShieldState.Square)
+        {
+            if (col.gameObject.CompareTag("Square Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+        if (shieldState == ShieldState.Triangle)
+        {
+            if (col.gameObject.CompareTag("Triangle Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+
+    }
 }
 
 public enum ShieldState

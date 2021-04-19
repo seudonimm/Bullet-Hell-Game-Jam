@@ -14,12 +14,14 @@ public class PlayerShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerEnemyStats.PlayerRateOfFire = shotTimerDefault;
     }
 
     // Update is called once per frame
     void Update()
     {
+        shotTimerDefault = PlayerEnemyStats.PlayerRateOfFire;
+
         shotTimer -= Time.deltaTime;
 
         if (Input.GetKey(KeyCode.Mouse0) && shotTimer <= 0)

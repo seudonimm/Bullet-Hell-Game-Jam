@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerEnemyStats.cs" />
+    <Compile Include="Assets\Scripts\UIValues.cs" />
     <Compile Include="Assets\Scripts\PlayerShield.cs" />
     <Compile Include="Assets\Scripts\RotateTowards.cs" />
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
@@ -62,8 +64,8 @@
     <Compile Include="Assets\Scripts\CircleEnemyController.cs" />
     <Compile Include="Assets\Scripts\BasicBulletPlayer.cs" />
     <Compile Include="Assets\Scripts\WaveManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerEnemyStats.cs" />
-    <Compile Include="Assets\Scripts\UIValues.cs" />
+    <Compile Include="Assets\Scripts\ButtonPulse.cs" />
+    <Compile Include="Assets\Scripts\GrowAndShrink.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
