@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveUp : MonoBehaviour
+public class MoveUp: MonoBehaviour
 {
     [SerializeField] float moveSpeed;
     [SerializeField] SpriteRenderer spr;
