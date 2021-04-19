@@ -521,7 +521,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 17, y: 0}
+  m_Offset: {x: 13.9, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -547,7 +547,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -17, y: 0}
+  m_Offset: {x: -13.92, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -573,7 +573,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -8}
+  m_Offset: {x: 0.18, y: -8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -599,7 +599,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 8}
+  m_Offset: {x: 0.08, y: 8}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -621,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 202804832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -813,7 +813,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 90
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1302,11 +1302,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6822690493542191140, guid: 0fc377f82a8d8944b9a878dea908d3f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822690493542191140, guid: 0fc377f82a8d8944b9a878dea908d3f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6822690493542191140, guid: 0fc377f82a8d8944b9a878dea908d3f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1358,7 +1358,7 @@ PrefabInstance:
       objectReference: {fileID: 1432601056}
     - target: {fileID: 9152418142369122514, guid: 0fc377f82a8d8944b9a878dea908d3f6, type: 3}
       propertyPath: moveSpeed
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9152418142369122514, guid: 0fc377f82a8d8944b9a878dea908d3f6, type: 3}
       propertyPath: maxBounces
@@ -1854,7 +1854,15 @@ MonoBehaviour:
   choice1: {fileID: 1794009211}
   choice2: {fileID: 1570150900}
   choice3: {fileID: 1184793090}
+  choiceButtons: []
+  enemyChoiceButtons: []
   choiceChosen: 0
+  tier1: 0
+  tier2: 0
+  tier3: 0
+  currentTier: 0
+  playerRands: 
+  enemyRands: 
 --- !u!4 &1752472192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 166779292158325909, guid: fedf458a8c3d99e489f70404500c0d33, type: 3}
@@ -2209,6 +2217,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3718213173239285122, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
+      propertyPath: livesText
+      value: 
+      objectReference: {fileID: 1076476094}
     - target: {fileID: 3718213173239285123, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2219,11 +2231,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718213173239285151, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -195.1
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 3718213173239285151, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -83.9
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3718213173239285151, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2272,11 +2284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865452381100549424, guid: 8673dd070843ade4a9c329899b6a137e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.2
+      value: 3.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 4865452381100549424, guid: 8673dd070843ade4a9c329899b6a137e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -28.2
+      value: -1.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 4865452381100549424, guid: 8673dd070843ade4a9c329899b6a137e, type: 3}
       propertyPath: m_LocalPosition.z

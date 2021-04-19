@@ -105,7 +105,6 @@ MonoBehaviour:
   plus: 0
   plusInc: 1000
   rotate: 0
-  target: {fileID: 3718213173239285123, guid: 9f7e79d3078885a4194fab2040c80478, type: 3}
 --- !u!61 &341857822126690774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,14 +122,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.533334, y: 8.533334}
+    oldSize: {x: 0.28444445, y: 0.28444445}
     newSize: {x: 8.533334, y: 8.533334}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.533334, y: 8.533334}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
 --- !u!1 &4307872763514390906
 GameObject:

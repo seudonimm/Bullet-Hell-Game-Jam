@@ -11,7 +11,7 @@ public class PlayerShield : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class PlayerShield : MonoBehaviour
 
                 spr.color = Color.red;
 
-                if(Input.GetAxis("Mouse ScrollWheel") > 0f) //scroll up
+                if (Input.GetAxis("Mouse ScrollWheel") > 0f) //scroll up
                 {
                     shieldState = ShieldState.Circle;
                 }
@@ -69,6 +69,31 @@ public class PlayerShield : MonoBehaviour
 
                 break;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (shieldState == ShieldState.Circle)
+        {
+            if (col.gameObject.CompareTag("Circle Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+        if (shieldState == ShieldState.Square)
+        {
+            if (col.gameObject.CompareTag("Square Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+        if (shieldState == ShieldState.Triangle)
+        {
+            if (col.gameObject.CompareTag("Triangle Projectile"))
+            {
+                col.gameObject.SetActive(false);
+            }
+        }
+
     }
 }
 

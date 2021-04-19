@@ -9,8 +9,13 @@ public class BasicBulletPlayer : MonoBehaviour
     [SerializeField] float moveSpeed;
 
     [SerializeField] Vector2 shotTrajectory;
-    [SerializeField] float shotJitter;
+    [SerializeField] float shotJitter; //closer this is to 0, the better the accuaracy
 
+
+    private void Awake()
+    {
+        PlayerEnemyStats.PlayerAccuracy = shotJitter;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +30,12 @@ public class BasicBulletPlayer : MonoBehaviour
     {
         _transform.Translate(shotTrajectory * Time.deltaTime * moveSpeed);
 
+        shotJitter = PlayerEnemyStats.PlayerAccuracy;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.CompareTag("Destroy Box"))
+        if (col.gameObject.CompareTag("Destroy Box"))
         {
             gameObject.SetActive(false);
         }

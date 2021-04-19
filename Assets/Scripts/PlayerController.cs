@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,9 +14,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] int lives;
 
+    [SerializeField] TextMeshProUGUI livesText;
+
     public bool dead;
 
-
+    private void Awake()
+    {
+        PlayerEnemyStats.PlayerMoveSpeed = moveSpeed;
+        livesText.text = "Lives: " + lives.ToString();
+        UIValues.PlayerLives = lives;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         GetInput();
         //Aim();
+
+        moveSpeed = PlayerEnemyStats.PlayerMoveSpeed;
     }
 
     private void FixedUpdate()
@@ -115,6 +126,8 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Square Projectile"))
         {
             lives--;
+            livesText.text = "Lives: " + lives.ToString();
+            UIValues.PlayerLives = lives;
 
             if (lives <= 0)
             {
