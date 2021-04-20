@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -3302730465428303843}
   - component: {fileID: 2744181937734543605}
   - component: {fileID: -4364452908096976487}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Triangle projectile
   m_TagString: Triangle Projectile
   m_Icon: {fileID: 0}

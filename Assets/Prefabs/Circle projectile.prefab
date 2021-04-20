@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4865452381100549427}
   - component: {fileID: 4865452381100549426}
   - component: {fileID: 4865452381100549425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle projectile
   m_TagString: Circle Projectile
   m_Icon: {fileID: 0}

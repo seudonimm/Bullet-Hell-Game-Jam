@@ -11,20 +11,36 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float triangleChance, circleChance, squareChance, eTriangleChance, eCircleChance, eSquareChance;
 
     [SerializeField] float spawnTimer, spawnTimerDefault;
+
+    [SerializeField] float spawnIncreases = 1;
+    [SerializeField] float spawnIncreaseTimer, spawnIncreaseTimerDefault = 6;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        PlayerEnemyStats.EnemySpawnRate = spawnIncreases;
+        spawnIncreaseTimer = spawnIncreaseTimerDefault;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(spawnTimer <= 0)
+        if(spawnIncreaseTimer <= 0)
         {
-            SpawnEnemy();
-        }
+            PlayerEnemyStats.EnemySpawnRate++;
+            spawnIncreases = PlayerEnemyStats.EnemySpawnRate;
+            spawnIncreaseTimer = spawnIncreaseTimerDefault;
 
+        }
+        if (spawnTimer <= 0)
+        {
+            for (int i = 0; i <= spawnIncreases; i++)
+            {
+                SpawnEnemy();
+            }
+            spawnTimer = spawnTimerDefault;
+
+        }
+        spawnIncreaseTimer -= Time.deltaTime;
         spawnTimer -= Time.deltaTime;
     }
 
@@ -59,10 +75,7 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemies[5], spawnPoint.position, spawnPoint.rotation);
 
         }
-        GameObject.fi
-        var dir = (Vector2)target.transform.position - (Vector2)transform.position;
-        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + adjustment;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
 
         spawnTimer = spawnTimerDefault;
     }

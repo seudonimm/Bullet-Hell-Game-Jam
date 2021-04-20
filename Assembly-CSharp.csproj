@@ -64,10 +64,11 @@
     <Compile Include="Assets\Scripts\PlayerShooting.cs" />
     <Compile Include="Assets\Scripts\MoveUp.cs" />
     <Compile Include="Assets\Scripts\CircleEnemyController.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\MoveUpTriangle.cs" />
     <Compile Include="Assets\Scripts\BasicBulletPlayer.cs" />
     <Compile Include="Assets\Scripts\WaveManager.cs" />
     <Compile Include="Assets\Scripts\MoveUpSquare.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -160,7 +160,7 @@ public class WaveManager : MonoBehaviour
 
         if (enemyRands[0] == 0)
         {
-            PlayerEnemyStats.EnemySpawnRate *= currentTier;
+            PlayerEnemyStats.EnemySpawnRate++;
         }
         if (enemyRands[0] == 1)
         {
@@ -198,7 +198,7 @@ public class WaveManager : MonoBehaviour
 
         if (enemyRands[1] == 0)
         {
-            PlayerEnemyStats.EnemySpawnRate *= currentTier;
+            PlayerEnemyStats.EnemySpawnRate++;
         }
         if (enemyRands[1] == 1)
         {
@@ -238,7 +238,7 @@ public class WaveManager : MonoBehaviour
 
         if (enemyRands[2] == 0)
         {
-            PlayerEnemyStats.EnemySpawnRate *= currentTier;
+            PlayerEnemyStats.EnemySpawnRate++;
         }
         if (enemyRands[2] == 1)
         {
