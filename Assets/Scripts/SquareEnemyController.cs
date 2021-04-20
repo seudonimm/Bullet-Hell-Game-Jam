@@ -30,8 +30,6 @@ public class SquareEnemyController : MonoBehaviour
 
             for (int i = 0; i <= bulletNum; i++)
             {
-
-
                 //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
                 GameObject shot = ObjectPooler.SharedInstance.GetPooledObject(ObjectPooler.SharedInstance.squareProjectiles);
 

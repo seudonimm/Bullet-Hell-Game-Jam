@@ -59,6 +59,10 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemies[5], spawnPoint.position, spawnPoint.rotation);
 
         }
+        GameObject.fi
+        var dir = (Vector2)target.transform.position - (Vector2)transform.position;
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + adjustment;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         spawnTimer = spawnTimerDefault;
     }

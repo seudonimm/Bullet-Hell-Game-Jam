@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 166779292158325909}
   shotTimer: 0
-  shotTimerDefault: 0.3
-  bulletNum: 5
+  shotTimerDefault: 1
+  bulletNum: 1
   currentRot: 0
   plus: 0
   plusInc: 1000
