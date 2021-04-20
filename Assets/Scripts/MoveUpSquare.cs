@@ -15,13 +15,13 @@ public class MoveUpSquare : MonoBehaviour
     void Start()
     {
         spr.color = new Color(Random.Range(0.8f, 1f), Random.Range(0.5f, 1f), Random.Range(0.5f, 1f));
-        rb.velocity = new Vector2(1,1);
+        rb.velocity = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * moveSpeed * Time.deltaTime;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+        rb.velocity = rb.velocity.normalized * Time.deltaTime * moveSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

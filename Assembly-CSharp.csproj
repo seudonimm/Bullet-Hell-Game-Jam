@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\BasicBulletPlayer.cs" />
     <Compile Include="Assets\Scripts\WaveManager.cs" />
     <Compile Include="Assets\Scripts\MoveUpSquare.cs" />
+    <Compile Include="Assets\Scripts\EnemyDeath.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -2076,7 +2076,7 @@ PrefabInstance:
       objectReference: {fileID: 1752472192}
     - target: {fileID: 1810958631536936197, guid: fedf458a8c3d99e489f70404500c0d33, type: 3}
       propertyPath: shotTimerDefault
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fedf458a8c3d99e489f70404500c0d33, type: 3}
