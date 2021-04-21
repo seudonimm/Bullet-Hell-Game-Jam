@@ -99,21 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 327536221791769141}
-<<<<<<< Updated upstream
   shotTimer: 0
   shotTimerDefault: 5
   bulletNum: 1
-=======
-<<<<<<< HEAD
-  shotTimer: 2
-  shotTimerDefault: 2
-  bulletNum: 2
-=======
-  shotTimer: 0
-  shotTimerDefault: 5
-  bulletNum: 1
->>>>>>> 03fdd1a3e79b7e9dd52bdd2bcbf0959973ef0d61
->>>>>>> Stashed changes
   currentRot: 0
   plus: 0
   plusInc: 1000

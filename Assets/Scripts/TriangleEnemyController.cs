@@ -38,9 +38,6 @@ public class TriangleEnemyController : MonoBehaviour
 
         if (shotTimer <= 0 )
         {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 
             for (int i = 0; i <= bulletNum; i++)
             {
@@ -61,19 +58,6 @@ public class TriangleEnemyController : MonoBehaviour
                 
             }
             shotTimer = PlayerEnemyStats.EnemyAtkSpeed;
-=======
->>>>>>> Stashed changes
-             //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-             GameObject shot = ObjectPooler.SharedInstance.GetPooledObject(ObjectPooler.SharedInstance.triangleProjectiles);
-
-             if (shot != null)
-             {
-                shot.transform.position = shotSpawn.transform.position;
-                shot.transform.rotation = shotSpawn.transform.rotation;
-                shot.SetActive(true);
-             }      
-            shotTimer = shotTimerDefault;
->>>>>>> 03fdd1a3e79b7e9dd52bdd2bcbf0959973ef0d61
         }
     }
 }
