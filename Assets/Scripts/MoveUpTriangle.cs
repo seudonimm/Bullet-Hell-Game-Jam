@@ -11,7 +11,7 @@ public class MoveUpTriangle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spr.color = new Color(Random.Range(0.8f, 1f), Random.Range(0.5f, 1f), Random.Range(0.5f, 1f));
+        //spr.color = new Color(Random.Range(0.8f, 1f), Random.Range(0.5f, 1f), Random.Range(0.5f, 1f));
     }
 
     // Update is called once per frame

@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI livesText;
 
+    [SerializeField] float invulnTimer, invulnTimerDefault;
+
+
     public bool dead;
 
     private void Awake()
@@ -125,6 +128,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Square Projectile"))
         {
+            StartCoroutine("InvulnTime");
             lives--;
             livesText.text = "Lives: " + lives.ToString();
             UIValues.PlayerLives = lives;
@@ -134,5 +138,18 @@ public class PlayerController : MonoBehaviour
                 dead = true;
             }
         }
+    }
+
+    IEnumerator InvulnTime()
+    {
+
+        Physics2D.IgnoreLayerCollision(9, 7, true);
+        Physics2D.IgnoreLayerCollision(9, 6, true);
+
+        yield return new WaitForSeconds(invulnTimer);
+
+        Physics2D.IgnoreLayerCollision(9, 7, false);
+        Physics2D.IgnoreLayerCollision(9, 6, false);
+
     }
 }

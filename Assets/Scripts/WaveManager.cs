@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WaveManager : MonoBehaviour
 {
-    [SerializeField] List<GameObject> enemies; // 0 = circle; 1 = triangle; 2 = square; 3 = circle elite; 4 = triangle; 5 = square elite;
+    [SerializeField] List<GameObject> enemies; // 0 = triangle; 1 = circle; 2 = square; 3 = triangle elite; 4 = circle elite; 5 = square elite;
 
     [SerializeField] float timer = 10;
     [SerializeField] TextMeshProUGUI timerText;
@@ -93,7 +93,7 @@ public class WaveManager : MonoBehaviour
 
                 for (int i = 0; i < enemyRands.Count; i++)
                 {
-                    enemyRands[i] = Random.Range(0, 3);
+                    enemyRands[i] = Random.Range(0, 4);
 
                     if (enemyRands[i] == 0)
                     {
@@ -109,6 +109,12 @@ public class WaveManager : MonoBehaviour
                         enemyChoiceButtons[i].text = "Increase ELITE ENEMY SPAWN RATE by " + currentTier;
 
                     }
+                    if (enemyRands[i] == 3)
+                    {
+                        enemyChoiceButtons[i].text = "Increase ENEMY HEALTH";
+
+                    }
+
 
                 }
 
@@ -147,7 +153,7 @@ public class WaveManager : MonoBehaviour
         }
         if (playerRands[0] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg *= currentTier;
+            PlayerEnemyStats.PlayerAtkDmg++;
         }
         if (playerRands[0] == 3)
         {
@@ -164,11 +170,15 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[0] == 1)
         {
-            PlayerEnemyStats.EnemyAtkSpeed *= currentTier;
+            PlayerEnemyStats.EnemyAtkSpeed -= currentTier;
         }
         if (enemyRands[0] == 2)
         {
             PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+        }
+        if (enemyRands[1] == 3)
+        {
+            PlayerEnemyStats.EnemyHealth++;
         }
 
         gameState = GameState.BeforePlaying;
@@ -185,7 +195,7 @@ public class WaveManager : MonoBehaviour
         }
         if (playerRands[1] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg *= currentTier;
+            PlayerEnemyStats.PlayerAtkDmg++;
         }
         if (playerRands[1] == 3)
         {
@@ -202,11 +212,15 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[1] == 1)
         {
-            PlayerEnemyStats.EnemyAtkSpeed *= currentTier;
+            PlayerEnemyStats.EnemyAtkSpeed -= currentTier;
         }
         if (enemyRands[1] == 2)
         {
             PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+        }
+        if (enemyRands[1] == 3)
+        {
+            PlayerEnemyStats.EnemyHealth++;
         }
 
         gameState = GameState.BeforePlaying;
@@ -225,7 +239,7 @@ public class WaveManager : MonoBehaviour
         }
         if (playerRands[2] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg *= currentTier;
+            PlayerEnemyStats.PlayerAtkDmg++;
         }
         if (playerRands[2] == 3)
         {
@@ -242,11 +256,15 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[2] == 1)
         {
-            PlayerEnemyStats.EnemyAtkSpeed *= currentTier;
+            PlayerEnemyStats.EnemyAtkSpeed -= currentTier;
         }
         if (enemyRands[2] == 2)
         {
             PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+        }
+        if (enemyRands[1] == 3)
+        {
+            PlayerEnemyStats.EnemyHealth++;
         }
 
         gameState = GameState.BeforePlaying;

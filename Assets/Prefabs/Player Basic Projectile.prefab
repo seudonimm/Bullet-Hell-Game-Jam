@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3796436012030607228}
   - component: {fileID: 3796436012030607235}
   - component: {fileID: 3796436012030607230}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Player Basic Projectile
   m_TagString: Player Projectile
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   _transform: {fileID: 0}
   moveSpeed: 5
   shotTrajectory: {x: 0, y: 0}
-  shotJitter: 0.2
+  shotJitter: 0.1
 --- !u!58 &3796436012030607230
 CircleCollider2D:
   m_ObjectHideFlags: 0

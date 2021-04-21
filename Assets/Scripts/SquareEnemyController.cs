@@ -13,7 +13,7 @@ public class SquareEnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        PlayerEnemyStats.EnemyAtkSpeed = shotTimerDefault;
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class SquareEnemyController : MonoBehaviour
             {
                 plus += plusInc;
             }
-            shotTimer = shotTimerDefault;
+            shotTimer = PlayerEnemyStats.EnemyAtkSpeed;
 
         }
     }
