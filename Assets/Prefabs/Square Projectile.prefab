@@ -100,11 +100,13 @@ MonoBehaviour:
   moveSpeed: 100
   spr: {fileID: 200393313754566239}
   count: 0
-  maxBounces: 3
+  maxBounces: 4
   mask:
     serializedVersion: 2
     m_Bits: 0
   rb: {fileID: 8861605566670330788}
+  xVel: 0
+  yVel: 0
 --- !u!61 &7236422521349578116
 BoxCollider2D:
   m_ObjectHideFlags: 0

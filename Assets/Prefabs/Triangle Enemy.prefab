@@ -98,14 +98,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 327536221791769141}
   shotTimer: 0
-  shotTimerDefault: 10
-  bulletNum: 2
+  shotTimerDefault: 5
+  bulletNum: 1
   currentRot: 0
   plus: 0
   plusInc: 1000
   rotate: 0
   target: {fileID: 0}
   adjustment: -90
+  moveSpeed: 1
+  playerPos: {x: 0, y: 0, z: 0}
 --- !u!61 &-7128550271063068106
 BoxCollider2D:
   m_ObjectHideFlags: 0
