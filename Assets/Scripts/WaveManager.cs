@@ -20,6 +20,7 @@ public class WaveManager : MonoBehaviour
     [SerializeField] bool choiceChosen;
 
     [SerializeField] float tier1, tier2, tier3, currentTier;
+    [SerializeField] float score1, score2, score3, totalScore;
 
     [SerializeField] List<int> playerRands, enemyRands;
     private void Awake()
@@ -41,6 +42,22 @@ public class WaveManager : MonoBehaviour
 
         GameStateMachine();
 
+    }
+
+    void TierCalcualtor()
+    {
+        if(UIValues.Score < score1)
+        {
+            currentTier = tier1;
+        }
+        else if(UIValues.Score < score2)
+        {
+            currentTier = tier2;
+        }
+        else
+        {
+            currentTier = tier3;
+        }
     }
 
     void GameStateMachine()
@@ -66,12 +83,12 @@ public class WaveManager : MonoBehaviour
 
                     if (playerRands[i] == 0)
                     {
-                        choiceButtons[i].text = "Increase PLAYER ACCURACY by " + currentTier;
+                        choiceButtons[i].text = "Increase PLAYER ACCURACY by " + currentTier/10;
 
                     }
                     if (playerRands[i] == 1)
                     {
-                        choiceButtons[i].text = "Increase PLAYER SPEED by " + currentTier;
+                        choiceButtons[i].text = "Increase PLAYER SPEED by " + currentTier/10;
 
                     }
                     if (playerRands[i] == 2)
@@ -81,7 +98,7 @@ public class WaveManager : MonoBehaviour
                     }
                     if (playerRands[i] == 3)
                     {
-                        choiceButtons[i].text = "Increase PLAYER RATE OF FIRE by " + currentTier;
+                        choiceButtons[i].text = "Increase PLAYER RATE OF FIRE by " + currentTier/10;
 
                     }
                     if (playerRands[i] == 4)
@@ -97,11 +114,11 @@ public class WaveManager : MonoBehaviour
 
                     if (enemyRands[i] == 0)
                     {
-                        enemyChoiceButtons[i].text = "Increase ENEMY SPAWN RATE by " + currentTier;
+                        enemyChoiceButtons[i].text = "Increase ENEMY SPAWN RATE";
                     }
                     if (enemyRands[i] == 1)
                     {
-                        enemyChoiceButtons[i].text = "Increase ENEMY ATTACK SPEED by " + currentTier;
+                        enemyChoiceButtons[i].text = "Increase ENEMY ATTACK SPEED by " + currentTier/10;
 
                     }
                     if (enemyRands[i] == 2)
@@ -119,6 +136,13 @@ public class WaveManager : MonoBehaviour
                 }
 
                 gameState = GameState.ChoiceMenu;
+
+                if(gameState != GameState.EndPlaying)
+                {
+                    totalScore += UIValues.Score;
+                    UIValues.Score = 0;
+                }
+
                 break;
 
             case GameState.ChoiceMenu:
@@ -145,19 +169,19 @@ public class WaveManager : MonoBehaviour
     {
         if (playerRands[0] == 0)
         {
-            PlayerEnemyStats.PlayerAccuracy /= currentTier;
+            PlayerEnemyStats.PlayerAccuracy -= (currentTier/10);
         }
         if (playerRands[0] == 1)
         {
-            PlayerEnemyStats.PlayerMoveSpeed *= currentTier;
+            PlayerEnemyStats.PlayerMoveSpeed += (currentTier/10);
         }
         if (playerRands[0] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg++;
+            PlayerEnemyStats.PlayerAtkDmg += (int)currentTier;
         }
         if (playerRands[0] == 3)
         {
-            PlayerEnemyStats.PlayerRateOfFire *= currentTier;
+            PlayerEnemyStats.PlayerRateOfFire -= (currentTier/10);
         }
         if (playerRands[0] == 4)
         {
@@ -170,15 +194,15 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[0] == 1)
         {
-            PlayerEnemyStats.EnemyAtkSpeed -= currentTier;
+            PlayerEnemyStats.EnemyAtkSpeed /= currentTier/10;
         }
         if (enemyRands[0] == 2)
         {
-            PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+            PlayerEnemyStats.EnemyEliteSpawnRate += currentTier;
         }
-        if (enemyRands[1] == 3)
+        if (enemyRands[0] == 3)
         {
-            PlayerEnemyStats.EnemyHealth++;
+            PlayerEnemyStats.EnemyHealth+= (int)currentTier;
         }
 
         gameState = GameState.BeforePlaying;
@@ -187,19 +211,19 @@ public class WaveManager : MonoBehaviour
     {
         if (playerRands[1] == 0)
         {
-            PlayerEnemyStats.PlayerAccuracy /= currentTier;
+            PlayerEnemyStats.PlayerAccuracy -= (currentTier / 10);
         }
         if (playerRands[1] == 1)
         {
-            PlayerEnemyStats.PlayerMoveSpeed *= currentTier;
+            PlayerEnemyStats.PlayerMoveSpeed += (currentTier / 10);
         }
         if (playerRands[1] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg++;
+            PlayerEnemyStats.PlayerAtkDmg += (int)currentTier;
         }
         if (playerRands[1] == 3)
         {
-            PlayerEnemyStats.PlayerRateOfFire *= currentTier;
+            PlayerEnemyStats.PlayerRateOfFire -= (currentTier / 10);
         }
         if (playerRands[1] == 4)
         {
@@ -216,11 +240,11 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[1] == 2)
         {
-            PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+            PlayerEnemyStats.EnemyEliteSpawnRate += currentTier;
         }
         if (enemyRands[1] == 3)
         {
-            PlayerEnemyStats.EnemyHealth++;
+            PlayerEnemyStats.EnemyHealth += (int)currentTier;
         }
 
         gameState = GameState.BeforePlaying;
@@ -231,19 +255,19 @@ public class WaveManager : MonoBehaviour
     {
         if (playerRands[2] == 0)
         {
-            PlayerEnemyStats.PlayerAccuracy /= currentTier;
+            PlayerEnemyStats.PlayerAccuracy -= (currentTier / 10);
         }
         if (playerRands[2] == 1)
         {
-            PlayerEnemyStats.PlayerMoveSpeed *= currentTier;
+            PlayerEnemyStats.PlayerMoveSpeed += (currentTier / 10);
         }
         if (playerRands[2] == 2)
         {
-            PlayerEnemyStats.PlayerAtkDmg++;
+            PlayerEnemyStats.PlayerAtkDmg += (int)currentTier;
         }
         if (playerRands[2] == 3)
         {
-            PlayerEnemyStats.PlayerRateOfFire *= currentTier;
+            PlayerEnemyStats.PlayerRateOfFire -= (currentTier / 10);
         }
         if (playerRands[2] == 4)
         {
@@ -260,11 +284,11 @@ public class WaveManager : MonoBehaviour
         }
         if (enemyRands[2] == 2)
         {
-            PlayerEnemyStats.EnemyEliteSpawnRate *= currentTier;
+            PlayerEnemyStats.EnemyEliteSpawnRate += currentTier;
         }
-        if (enemyRands[1] == 3)
+        if (enemyRands[2] == 3)
         {
-            PlayerEnemyStats.EnemyHealth++;
+            PlayerEnemyStats.EnemyHealth += (int)currentTier;
         }
 
         gameState = GameState.BeforePlaying;

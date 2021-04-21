@@ -21,10 +21,18 @@ public class MoveUp: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Destroy Box"))
+        if (col.gameObject.CompareTag("Destroy Box") || col.gameObject.CompareTag("Destroyer"))
         {
             gameObject.SetActive(false);
         }
     }
+    //private void OnTriggerStay2D(Collider2D col)
+    //{
+    //    if (col.gameObject.CompareTag("Destroy Box") || col.gameObject.CompareTag("Destroyer"))
+    //    {
+    //        gameObject.SetActive(false);
+    //    }
+
+    //}
 
 }

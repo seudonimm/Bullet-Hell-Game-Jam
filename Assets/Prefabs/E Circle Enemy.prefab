@@ -113,10 +113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 1015521972956819124}
-  shotTimer: 0
+  shotTimer: 1
   shotTimerDefault: 1
   bulletNum: 12
   currentRot: 0
   plus: 0
   plusInc: 1000
+  spinDirection: 0
   rotate: 1

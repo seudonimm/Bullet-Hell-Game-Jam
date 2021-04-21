@@ -9,6 +9,7 @@ TagManager:
   - Circle Projectile
   - Square Projectile
   - Destroy Box
+  - Destroyer
   layers:
   - Default
   - TransparentFX

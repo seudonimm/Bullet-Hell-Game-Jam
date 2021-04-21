@@ -19,6 +19,14 @@ public class EnemySpawner : MonoBehaviour
     {
         PlayerEnemyStats.EnemySpawnRate = spawnIncreases;
         spawnIncreaseTimer = spawnIncreaseTimerDefault;
+
+        triangleChance -= PlayerEnemyStats.EnemyEliteSpawnRate;
+        circleChance -= PlayerEnemyStats.EnemyEliteSpawnRate;
+        squareChance -= PlayerEnemyStats.EnemyEliteSpawnRate;
+        eTriangleChance += PlayerEnemyStats.EnemyEliteSpawnRate;
+        eCircleChance += PlayerEnemyStats.EnemyEliteSpawnRate;
+        eSquareChance += PlayerEnemyStats.EnemyEliteSpawnRate;
+
     }
 
     // Update is called once per frame
@@ -54,23 +62,23 @@ public class EnemySpawner : MonoBehaviour
         {
             Instantiate(enemies[0], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < circleChance)
+        else if(rand < triangleChance + circleChance)
         {
             Instantiate(enemies[1], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < squareChance)
+        else if(rand < circleChance + squareChance)
         {
             Instantiate(enemies[2], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < eTriangleChance)
+        else if(rand < squareChance + eTriangleChance)
         {
             Instantiate(enemies[3], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < eCircleChance)
+        else if(rand < eTriangleChance + eCircleChance)
         {
             Instantiate(enemies[4], spawnPoint.position, spawnPoint.rotation);
         }
-        else
+        else if(rand < eCircleChance + eSquareChance)
         {
             Instantiate(enemies[5], spawnPoint.position, spawnPoint.rotation);
 

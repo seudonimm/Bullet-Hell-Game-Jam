@@ -123,14 +123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 544965093736860763}
-  shotTimer: 0
+  shotTimer: 3
   shotTimerDefault: 5
   bulletNum: 3
-  currentRot: 0
-  plus: 0
-  plusInc: 0
-  rotate: 0
   target: {fileID: 0}
   adjustment: -90
   moveSpeed: 1
+  shotBurst: 0
   playerPos: {x: 0, y: 0, z: 0}

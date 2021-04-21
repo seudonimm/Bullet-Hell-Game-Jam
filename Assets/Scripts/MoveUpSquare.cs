@@ -49,7 +49,7 @@ public class MoveUpSquare : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
        
-        if (col.gameObject.CompareTag("Destroy Box") && count == maxBounces)
+        if ((col.gameObject.CompareTag("Destroy Box") && count == maxBounces) || col.gameObject.CompareTag("Destroyer"))
         {
             gameObject.SetActive(false);
             count = 0;

@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 327536221791769141}
-  shotTimer: 0
+  shotTimer: 2
   shotTimerDefault: 5
-  bulletNum: 1
+  bulletNum: 0
   currentRot: 0
   plus: 0
   plusInc: 1000
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 2
+  playerDmg: 1
 --- !u!50 &-1767666593547673940
 Rigidbody2D:
   serializedVersion: 4

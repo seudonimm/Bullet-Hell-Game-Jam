@@ -41,7 +41,7 @@ public class PlayerShield : MonoBehaviour
 
             case ShieldState.Square:
 
-                spr.color = Color.magenta;
+                spr.color = Color.blue;
 
                 if (Input.GetAxis("Mouse ScrollWheel") > 0f) //scroll up
                 {
@@ -56,7 +56,7 @@ public class PlayerShield : MonoBehaviour
 
             case ShieldState.Circle:
 
-                spr.color = Color.blue;
+                spr.color = Color.yellow;
 
                 if (Input.GetAxis("Mouse ScrollWheel") > 0f) //scroll up
                 {
@@ -77,6 +77,7 @@ public class PlayerShield : MonoBehaviour
             if (col.gameObject.CompareTag("Circle Projectile"))
             {
                 col.gameObject.SetActive(false);
+                UIValues.Meter++;
             }
         }
         if (shieldState == ShieldState.Square)
@@ -84,6 +85,8 @@ public class PlayerShield : MonoBehaviour
             if (col.gameObject.CompareTag("Square Projectile"))
             {
                 col.gameObject.SetActive(false);
+                UIValues.Meter++;
+
             }
         }
         if (shieldState == ShieldState.Triangle)
@@ -91,6 +94,8 @@ public class PlayerShield : MonoBehaviour
             if (col.gameObject.CompareTag("Triangle Projectile"))
             {
                 col.gameObject.SetActive(false);
+                UIValues.Meter++;
+
             }
         }
 
