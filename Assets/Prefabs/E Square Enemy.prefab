@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4073356156770555653}
   - component: {fileID: -8889998732646084775}
   - component: {fileID: 2908785853491255582}
+  - component: {fileID: -5354181793308194320}
+  - component: {fileID: 8931094610215763305}
   m_Layer: 0
   m_Name: E Square Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -124,9 +126,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 4993406999691163280}
   shotTimer: 2
-  shotTimerDefault: 2
+  shotTimerDefault: 4
   bulletNum: 1
   currentRot: 0
   plus: 0
   plusInc: 1000
   rotate: 0
+--- !u!114 &-5354181793308194320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516340335969189592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed581af16bdc1c84a869aa2bc2204f71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 5
+  playerDmg: 1
+--- !u!50 &8931094610215763305
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516340335969189592}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

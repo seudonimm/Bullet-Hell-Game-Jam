@@ -39,5 +39,11 @@ public class BasicBulletPlayer : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+
+        if(col.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.SetActive(false);
+
+        }
     }
 }

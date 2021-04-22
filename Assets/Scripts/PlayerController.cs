@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float invulnTimer, invulnTimerDefault;
 
+    [SerializeField] SpriteRenderer spr;
 
+    [SerializeField] Color originalColor, invulnColor;
     public bool dead;
 
     private void Awake()
@@ -128,8 +130,9 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Square Projectile"))
         {
-            StartCoroutine("InvulnTime");
             lives--;
+            StartCoroutine("InvulnTime");
+            
             livesText.text = "Lives: " + lives.ToString();
             UIValues.PlayerLives = lives;
 
@@ -142,7 +145,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator InvulnTime()
     {
-
+        spr.color = invulnColor;
         Physics2D.IgnoreLayerCollision(9, 7, true);
         Physics2D.IgnoreLayerCollision(9, 6, true);
 
@@ -151,5 +154,6 @@ public class PlayerController : MonoBehaviour
         Physics2D.IgnoreLayerCollision(9, 7, false);
         Physics2D.IgnoreLayerCollision(9, 6, false);
 
+        spr.color = originalColor;
     }
 }

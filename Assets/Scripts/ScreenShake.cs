@@ -54,12 +54,12 @@ public class ScreenShake : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Square Projectile"))
-        {
-            UIValues.ShakeDuration = defaultShakeDuration;
-        }
+    //private void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    if (col.gameObject.CompareTag("Triangle Projectile") || col.gameObject.CompareTag("Circle Projectile") || col.gameObject.CompareTag("Square Projectile"))
+    //    {
+    //        UIValues.ShakeDuration = defaultShakeDuration;
+    //    }
 
-    }
+    //}
 }

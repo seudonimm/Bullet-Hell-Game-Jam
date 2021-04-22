@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 925665137275018972}
   m_Layer: 0
   m_Name: Circle Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotSpawn: {fileID: 8406655388001614898}
-  shotTimer: 0
-  shotTimerDefault: 2
+  shotTimer: 2
+  shotTimerDefault: 4
   bulletNum: 8
   currentRot: 0
   plus: 0

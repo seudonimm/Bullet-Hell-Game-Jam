@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1767666593547673940}
   m_Layer: 0
   m_Name: Triangle Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
   rotate: 0
   target: {fileID: 0}
   adjustment: -90
-  moveSpeed: 1
+  moveSpeed: 0.5
   playerPos: {x: 0, y: 0, z: 0}
 --- !u!61 &-7128550271063068106
 BoxCollider2D:

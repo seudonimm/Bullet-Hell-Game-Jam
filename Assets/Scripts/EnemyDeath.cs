@@ -29,19 +29,22 @@ public class EnemyDeath : MonoBehaviour
 
             enemyHealth -= playerDmg;
 
-            if(enemyHealth <= 0)
+            if (enemyHealth <= 0)
             {
-                Destroy(gameObject);
-            }
 
-            //scoring
-            if(tag == "Elite Enemy")
-            {
-                UIValues.Score += 3;
-            }
-            else
-            {
-                UIValues.Score++;
+
+                //scoring
+                if (tag == "Elite Enemy")
+                {
+                    UIValues.Score += 3;
+                }
+                else
+                {
+                    UIValues.Score++;
+                }
+
+                Destroy(gameObject);
+
             }
         }
     }

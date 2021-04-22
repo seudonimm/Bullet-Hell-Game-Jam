@@ -10,7 +10,7 @@ public class ClearScreen : MonoBehaviour
     [SerializeField] bool grow;
     [SerializeField] float growSpeed;
 
-    [SerializeField] Transform circleEffect;
+    //[SerializeField] Transform circleEffect;
 
     [SerializeField] float meterVal, meterValMax, t;
     [SerializeField] GameObject meterRect;
@@ -22,7 +22,7 @@ public class ClearScreen : MonoBehaviour
     {
         grow = false;
         //circleCol.radius = 0;
-        circleEffect.localScale = Vector2.zero;
+        //circleEffect.localScale = Vector2.zero;
 
     }
 
@@ -38,6 +38,8 @@ public class ClearScreen : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && UIValues.Meter >= meterValMax)
         {
             grow = true;
+            UIValues.Timer = 10;
+
         }
 
         if (grow)
@@ -45,7 +47,6 @@ public class ClearScreen : MonoBehaviour
             //circleCol.radius += growSpeed * Time.deltaTime;
             //circleEffect.localScale = new Vector2(circleCol.radius * circleCol.radius, circleCol.radius * circleCol.radius);
             transform.localScale += Vector3.one * Time.deltaTime * growSpeed;
-
             if (transform.localScale.x >= 70)
             {
                 grow = false;
