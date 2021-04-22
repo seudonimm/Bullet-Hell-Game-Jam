@@ -16,6 +16,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         PlayerEnemyStats.PlayerRateOfFire = shotTimerDefault;
+        PlayerEnemyStats.PlayerShotCount = 0;
         currentRot = shotSpawn.rotation.eulerAngles.z;
     }
 

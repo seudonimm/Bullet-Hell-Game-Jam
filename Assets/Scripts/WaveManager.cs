@@ -33,6 +33,8 @@ public class WaveManager : MonoBehaviour
         choiceChosen = false;
         waveNum = 1;
         UIValues.Timer = timer;
+
+        
     }
 
     // Start is called before the first frame update
@@ -53,6 +55,8 @@ public class WaveManager : MonoBehaviour
         Lost();
 
         TierCalcualtor();
+
+        PlayerEnemyStats.EnemyHealth = 0;
     }
 
     void Lost()

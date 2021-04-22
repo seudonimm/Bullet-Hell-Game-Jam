@@ -54,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        spawnPoint.position = new Vector2(Random.Range(-5f, 5f), Random.Range(-3f, 3f));
+        spawnPoint.position = new Vector2(Random.Range(-9f, 9f), Random.Range(-5f, 5f));
 
         int rand = Random.Range(0, 100);
 
