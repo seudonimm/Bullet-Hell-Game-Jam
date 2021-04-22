@@ -10,11 +10,13 @@ public class PlayerShooting : MonoBehaviour
     //[SerializeField] GameObject shot;
 
     [SerializeField] float shotTimer, shotTimerDefault; //interval between which shots will fire
+    [SerializeField] float currentRot;
 
     // Start is called before the first frame update
     void Start()
     {
         PlayerEnemyStats.PlayerRateOfFire = shotTimerDefault;
+        currentRot = shotSpawn.rotation.eulerAngles.z;
     }
 
     // Update is called once per frame
@@ -26,17 +28,30 @@ public class PlayerShooting : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0) && shotTimer <= 0)
         {
+            currentRot = shotSpawn.rotation.eulerAngles.z;
+
             //Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            GameObject shot = ObjectPooler.SharedInstance.GetPooledObject(ObjectPooler.SharedInstance.playerProjectiles);
-
-            shotTimer = shotTimerDefault;
-
-            if (shot != null)
+            for (int i = 0; i <= PlayerEnemyStats.PlayerShotCount; i++)
             {
-                shot.transform.position = shotSpawn.transform.position;
-                shot.transform.rotation = shotSpawn.transform.rotation;
-                shot.SetActive(true);
+                GameObject shot = ObjectPooler.SharedInstance.GetPooledObject(ObjectPooler.SharedInstance.playerProjectiles);
+
+                shotTimer = shotTimerDefault;
+
+                if (shot != null)
+                {
+                    shot.transform.position = shotSpawn.transform.position;
+                    if (i % 2 == 0)
+                    {
+                        shot.transform.rotation = Quaternion.Euler(0, 0, currentRot += 45 * (i) / (PlayerEnemyStats.PlayerShotCount + 1));
+                    }
+                    else
+                    {
+                        shot.transform.rotation = Quaternion.Euler(0, 0, currentRot += 45 * (-i) / (PlayerEnemyStats.PlayerShotCount + 1));
+                    }
+                    shot.SetActive(true);
+                }
             }
+
         }
     }
 }

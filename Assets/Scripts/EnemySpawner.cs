@@ -66,19 +66,19 @@ public class EnemySpawner : MonoBehaviour
         {
             Instantiate(enemies[1], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < circleChance + squareChance)
+        else if(rand < triangleChance + circleChance + squareChance)
         {
             Instantiate(enemies[2], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < squareChance + eTriangleChance)
+        else if(rand < triangleChance + circleChance + squareChance + eTriangleChance)
         {
             Instantiate(enemies[3], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < eTriangleChance + eCircleChance)
+        else if(rand < triangleChance + circleChance + squareChance + eTriangleChance + eCircleChance)
         {
             Instantiate(enemies[4], spawnPoint.position, spawnPoint.rotation);
         }
-        else if(rand < eCircleChance + eSquareChance)
+        else if(rand < triangleChance + circleChance + squareChance + eTriangleChance + eCircleChance + eSquareChance)
         {
             Instantiate(enemies[5], spawnPoint.position, spawnPoint.rotation);
 

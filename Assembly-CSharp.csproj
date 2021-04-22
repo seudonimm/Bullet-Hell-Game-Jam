@@ -70,10 +70,12 @@
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\MoveUpTriangle.cs" />
     <Compile Include="Assets\Scripts\BasicBulletPlayer.cs" />
+    <Compile Include="Assets\Scripts\ClearScreen.cs" />
     <Compile Include="Assets\Scripts\WaveManager.cs" />
     <Compile Include="Assets\Scripts\MoveUpSquare.cs" />
     <Compile Include="Assets\Scripts\ETriangleEnemyController.cs" />
-    <Compile Include="Assets\Scripts\ClearScreen.cs" />
+    <Compile Include="Assets\Scripts\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\StayAtObject.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
